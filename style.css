@@ -1,0 +1,173 @@
+
+*{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+.sidebar {
+  position: fixed;
+  left: 0px;
+  width: 250px;
+  height: 100%;
+  background: #0e6d50;
+  transition: all .5s ease;
+  border-right: 3px solid white;
+}
+.sidebar header {
+  font-size: 22px;
+  color: white;
+  line-height: 70px;
+  text-align: center;
+  background: #065a69;
+  user-select: none;
+}
+.sidebar ul a{
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 65px;
+  font-size: 20px;
+  color: white;
+  padding-left: 40px;
+  box-sizing: border-box;
+  border-bottom: 1px solid white;
+  border-top: 1px solid rgba(255,255,255,.1);
+  transition: .4s;
+}
+ul li:hover a{
+  padding-left: 50px;
+  background-color: white;
+  color: rgb(0, 0, 0);
+}
+.sidebar ul a i{
+  margin-right: 16px;
+}
+#check{
+  display: none;
+}
+label #btn,label #cancel{
+  position: absolute;
+  background: #4c0997;
+  border-radius: 50px;
+  cursor: pointer;
+}
+label #btn{
+  left: 250px;
+  top: 25px;
+  font-size: 35px;
+  color: white;
+  padding: 6px 12px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all .5s;
+}
+label #cancel{
+  z-index: 1111;
+  left: 195px;
+  top: 17px;
+  font-size: 30px;
+  color: white;
+  padding: 4px 9px;
+  transition: all .5s ease;
+  left: 18%;
+}
+#check:checked ~ .sidebar{
+  left: -250px;
+}
+#check:checked ~ label #btn{
+  left: 40px;
+  opacity: 1;
+  pointer-events: auto;
+}
+#check:checked ~ label #cancel{
+  left: -195px;
+}
+
+.container{
+  background-image: url(bg.jpeg);
+  height: 100vh;
+  width: 115%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+  background-color: rgb(74, 184, 151);
+  }
+  #check:checked ~ .container{
+    margin-left: -105px;
+    transition: all .5s;
+  }
+.col-1{
+    flex-basis: 50%;
+    min-width: 300px;
+}
+.form-box{
+  width: 350px;
+	height: 500px;
+	position: flex;
+  top: 50px;
+  left: 120px;
+	background: rgba(0,0,0,0.6);
+}
+.main-heading{
+    color: rgb(62, 212, 231);
+    padding-bottom: 20px;
+}
+.form
+{
+	position: center;
+	margin: 0 auto 100px;
+	padding: 45px;
+  text-align: center;
+
+}
+
+.form input{
+	font-family: sans-serif;
+	outline: none;
+  border: none;
+  border-bottom: 1px solid black;
+	width: 100%;
+	margin: 0 0 15px;
+	padding: 15px;
+	font-size: 14px;
+}
+.form select{
+	font-family: sans-serif;
+	outline: none;
+  border: none;
+  border-bottom: 1px solid black;
+	width: 100%;
+	margin: 0 0 15px;
+	padding: 15px;
+	font-size: 14px;
+}
+.form button{
+	font-family: sans-serif;
+	width: 100%;
+  color: white;
+	font-size: 14px;
+	cursor: pointer;
+	padding: 15px;
+  border: none;
+  background: rgb(19, 21, 107);
+}
+.form .message{
+  font-size: 12px;
+	margin: 15px 0 0;
+  color: white;
+}
+.form .message a{
+	color: orangered;
+	text-decoration: none;
+}
+.form .register-form{
+	display: none;
+}
+
